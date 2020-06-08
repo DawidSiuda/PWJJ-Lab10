@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<Pane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lab10.Controler">
+   <children>
+         <ImageView fx:id="background" fitHeight="700.0" fitWidth="750.0" layoutX="-4.0">
+         <image>
+            <Image url="@background.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="background1" fitHeight="48.0" fitWidth="203.0" layoutX="268.0" layoutY="27.0">
+         <image>
+            <Image url="@Title.png" />
+         </image>
+      </ImageView>
+      <CheckBox fx:id="checkBoxPlayComputer" layoutX="558.0" layoutY="124.0" mnemonicParsing="false" text="Play with computer" />
+      <ChoiceBox fx:id="choiceBoxSelectStrategy" layoutX="558.0" layoutY="166.0" prefWidth="150.0" />
+      <Label layoutX="558.0" layoutY="149.0" prefHeight="17.0" prefWidth="150.0" text="Choose a strategy" />
+      <Button layoutX="558.0" layoutY="210.0" mnemonicParsing="false" onAction="#buttonReloadClicked" text="Reload scripts" />
+   </children>
+</Pane>

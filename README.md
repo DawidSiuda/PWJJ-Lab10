@@ -1,0 +1,10 @@
+Ćwiczenie 10. Wykorzystanie kodu natywnego oraz skryptów w aplikacjach wykorzystujących sztuczną inteligencję.
+Należy napisać aplikację do gry z komputerem w tzw. 5,5,4-game (wariant ogólniejszej m,n,k-game). Dalej należy napisać algorytmy sztucznej inteligencji dostarczające metody do generowania kolejnych ruchów (decyzji) gracza komputerowego według jakiejś strategii za pomocą obu poniższych technik.
+
+Technika pierwsza. Skrypty JavaScript z wykorzystaniem silnika Nashorn. Skrypty powinny być wczytywane ze wskazanego katalogu w sposób dynamiczny – ma być możliwość zmiany strategii (skryptu) podczas działania aplikacji, włącznie z dodaniem nowego skryptu do katalogu. Należy założyć, że wszystkie metody generujące kolejne ruchy mają taką samą listę argumentów oraz zwracają wartości takiego samego typu. W załadowanych skryptach dozwolone jest wykorzystanie klas Java'y.
+
+Technika druga. Wykorzystanie kodu natywnego z użyciem JNI. Polega to na wywołaniu funkcji C/C++ i odebraniu jej wyniku. Sposób przesyłu danych/definicji argumentów funkcji względnie dowolny. Do zaprezentowania planszy wystarczy 50 bitów (mamy 5 × 5 = 25 pól, każde może mieć 3 stany, do czego wystarczą 2 bity na pole). Możemy więc reprezentować stan planszy jedną liczbą co najmniej 50-bitową (long long int ma co najmniej 64 bity), dwoma zmiennymi co najmniej 25-bitowymi (long int ma co najmniej 32 bity) lub 5 liczbami co najmniej 10 bitowymi (wystarczy int lub short int, mają co najmniej 16 bitów). Na wyższą ocenę należy jednak przesłać dane w postaci tablicy.
+
+Dla każdej techniki zaimplementować przynajmniej 2 strategie gracza komputerowego (mogą być te same dla obu technik). Na wyższą ocenę powinna pojawić się jedna średniozaawansowana lub zaawansowana strategia (najlepiej algorytm minimax lub alfabeta).
+
+Aplikacja (konsolowa lub okienkowa, ale ta pierwsza będzie łatwiejsza) powinna umożliwiać grę, zmianę algorytmu/techniki na bieżąco oraz wyświetlać przebieg rozgrywki.
